@@ -1,0 +1,16 @@
+<% layout('layout/boilerplate')%>
+    <h1>All camps</h1>
+    <h1><%=cam.title%></h1>
+    <h2><%=cam.location%></h2>
+    <img src="<%=cam.image%>">
+    <p>"<%=cam.description%></p>
+    <p>
+        <form action="/makecg/<%=cam._id%>?_method=DELETE" method="post">
+            <button>Delete</button>
+        </form>
+    </p>
+    
+    <footer>
+        <a href="/makecg/<%=cam._id%>/edit">Edit</a>
+        <a href="/makecg">back</a>
+    </footer>
